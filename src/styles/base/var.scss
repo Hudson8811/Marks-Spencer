@@ -1,0 +1,40 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$mainFont: "Raleway", "Arial", sans-serif;
+$titleFont: "Alice", "Georgia", serif;
+
+/* цвета */
+$white: #ffffff;
+$pinkish: #fdf5f5;
+$pinkish2: #f7eee5;
+$grey-e6: #e6ddd4;
+
+$green-52: #527462;
+$green-73: #739985;
+
+$pink: #fad4d6;
+$pink2: #fad8da;
+
+$dark: #103528;
+
+$brown: #655334;
+$light-brown: #a39a6f;
+$gold: #ebcd6f;
+
+$textMainColor: $pinkish;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

@@ -1,0 +1,29 @@
+.history {
+  &__container {
+  }
+
+  &__title {
+    margin: 0 0 21px;
+    text-align: center;
+
+    @include max(xxl) {
+      margin-bottom: vw(21);
+    }
+  }
+
+  &__text {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    @include max(xxl) {
+      max-width: vw(930);
+      font-size: vw(21);
+      line-height: vw(24);
+    }
+  }
+}

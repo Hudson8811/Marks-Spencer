@@ -1,1 +1,1 @@
-# Marks-Spencer
+# Marks & Spencer

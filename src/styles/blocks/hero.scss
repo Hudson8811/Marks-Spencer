@@ -1,0 +1,257 @@
+.hero {
+  padding-top: 76px;
+  padding-bottom: 316px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-image: url("../images/hero/hero-bg.png");
+
+  @include max(xxl) {
+    padding-top: vw(76);
+    padding-bottom: vw(316);
+  }
+
+  @include retina {
+    background-image: url("../images/hero/hero-bg@2x.png");
+  }
+
+  &__container {
+  }
+
+  &__main {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 127px;
+      transform: translateY(100%);
+      width: 4px;
+      height: 478px;
+      margin-left: -2px;
+      background-image: linear-gradient(to left, $brown 50%, $gold 50%);
+
+      @include max(xxl) {
+        width: vw(4);
+        height: vw(478);
+        bottom: vw(127);
+        margin-left: vw(-2);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 0;
+    max-width: 858px;
+    margin: 0 auto 65px;
+    padding: 53px 12px 54px;
+    color: $green-52;
+    text-align: center;
+    letter-spacing: 0;
+    border-radius: 5px;
+    background-color: $grey-e6;
+
+    @include max(xxl) {
+      max-width: vw(858);
+      margin-bottom: vw(65);
+      padding: vw(53) vw(12) vw(54);
+      font-size: vw(48);
+      border-radius: vw(5);
+    }
+
+    span {
+      color: $green-73;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 11px;
+      left: 11px;
+      right: 11px;
+      bottom: 13px;
+      border: solid 3px $green-52;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background-color: $pinkish2;
+
+      @include max(xxl) {
+        top: vw(11);
+        left: vw(11);
+        right: vw(11);
+        bottom: vw(13);
+        border-width: vw(3);
+        box-shadow: 0px vw(4) vw(4) rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    left: -172px;
+    display: flex;
+    flex-direction: column;
+    width: 216px;
+    height: 216px;
+    padding: 37px 10px 42px;
+    border-radius: 50%;
+    background-color: $pink;
+    text-decoration: none;
+
+    @include max(xxl) {
+      top: vw(20);
+      left: vw(-172);
+      width: vw(216);
+      height: vw(216);
+      padding: vw(37) vw(10) vw(42);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      border-radius: 50%;
+      border: solid 10px $pink2;
+      background-color: $pink2;
+      filter: blur(13px);
+
+      @include max(xxl) {
+        $blur: vw(13);
+        top: vw(-10);
+        left: vw(-10);
+        right: vw(-10);
+        bottom: vw(-10);
+        border-width: vw(10);
+        filter: blur($blur);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 57px;
+      height: 5px;
+      margin-top: 9px;
+      background-color: $dark;
+      align-self: center;
+
+      @include max(xxl) {
+        width: vw(57);
+        height: vw(5);
+        margin-top: vw(9);
+      }
+    }
+
+    &-title {
+      margin-bottom: 3px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $dark;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-align: center;
+      align-self: center;
+
+      @include max(xxl) {
+        margin-bottom: vw(3);
+        font-size: vw(18);
+        line-height: vw(24);
+      }
+    }
+
+    &-text {
+      font-size: 21px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $dark;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-align: center;
+      align-self: center;
+
+      @include max(xxl) {
+        font-size: vw(21);
+        line-height: vw(24);
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    max-width: 858px;
+    margin: 0 auto 65px;
+    padding: 48px 46px 55px 67px;
+
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    text-align: center;
+
+    background-color: rgba(16, 53, 40, 0.35);
+    border-radius: 5px;
+
+    @include max(xxl) {
+      max-width: vw(858);
+      margin-bottom: vw(65);
+      padding: vw(48) vw(46) vw(55) vw(67);
+
+      font-size: vw(21);
+      line-height: vw(24);
+      border-radius: vw(5);
+    }
+
+    .short {
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include max(xxl) {
+        max-width: vw(580);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 13px;
+      left: 11px;
+      right: 11px;
+      bottom: 12px;
+      border: solid 3px $green-52;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      @include max(xxl) {
+        top: vw(13);
+        left: vw(11);
+        right: vw(11);
+        bottom: vw(12);
+        border-width: vw(3);
+        box-shadow: 0px vw(4) vw(4) rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    p + p {
+      margin-top: 24px;
+
+      @include max(xxl) {
+        margin-top: vw(24);
+      }
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
+}

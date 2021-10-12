@@ -1,0 +1,59 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 90px;
+
+  @include max(xxl) {
+    padding-top: vw(90);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1824px;
+
+    @include max(xxl) {
+      max-width: vw(1824);
+    }
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__logo {
+    &--ms {
+      width: 253px;
+      margin-left: 21px;
+
+      @include max(xxl) {
+        width: vw(253);
+        margin-left: vw(21);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &--w {
+      width: 254px;
+      margin-top: -22px;
+
+      @include max(xxl) {
+        width: vw(254);
+        margin-top: vw(-22);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
