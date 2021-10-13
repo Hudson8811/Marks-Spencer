@@ -15,6 +15,16 @@
     background-image: url("../images/hero/hero-bg@2x.png");
   }
 
+  @include max(sm) {
+    padding-top: vw(226, 414);
+    //padding-bottom: vw(316);
+    background-image: url("../images/hero/hero-bg-mobile.jpg");
+
+    @include retina {
+      background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
+    }
+  }
+
   &__container {
   }
 

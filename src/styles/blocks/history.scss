@@ -1,7 +1,4 @@
 .history {
-  &__container {
-  }
-
   &__title {
     margin: 0 0 21px;
     text-align: center;
@@ -13,8 +10,7 @@
 
   &__text {
     max-width: 930px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 162px;
     font-size: 21px;
     line-height: 24px;
     letter-spacing: 0.06em;
@@ -22,8 +18,431 @@
 
     @include max(xxl) {
       max-width: vw(930);
+      margin-bottom: vw(162);
       font-size: vw(21);
       line-height: vw(24);
+    }
+  }
+
+  &__section {
+    $section: &;
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--bandage {
+      #{$section}-line {
+        &::before {
+          top: -95px;
+          height: calc(100% + 95px);
+
+          @include max(xxl) {
+            top: -4.947916666666667vw;
+            height: calc(100% + 4.947916666666667vw);
+          }
+        }
+
+        &::after {
+          top: 76px;
+
+          @include max(xxl) {
+            top: vw(76);
+          }
+        }
+      }
+
+      #{$section}-main {
+        padding-top: 72px;
+        padding-bottom: 290px;
+
+        @include max(xxl) {
+          padding-top: vw(72);
+          padding-bottom: vw(290);
+        }
+      }
+
+      #{$section}-text {
+        width: 624px;
+        margin-left: -21px;
+
+        @include max(xxl) {
+          width: vw(624);
+          margin-left: vw(-21);
+        }
+      }
+
+      #{$section}-fact {
+        margin-top: 66px;
+
+        @include max(xxl) {
+          margin-top: vw(66);
+        }
+      }
+
+      #{$section}-aside {
+        display: flex;
+        width: 837px;
+        margin-right: -232px;
+
+        @include max(xxl) {
+          width: vw(837);
+          margin-right: vw(-232);
+        }
+      }
+
+      #{$section}-image {
+        flex-shrink: 0;
+        align-self: center;
+
+        &--one {
+          position: relative;
+          z-index: 1;
+          width: 490px;
+
+          @include max(xxl) {
+            width: vw(490);
+          }
+        }
+
+        &--two {
+          width: 547px;
+          margin-left: -200px;
+          margin-top: 29px;
+
+          @include max(xxl) {
+            width: vw(574);
+            margin-left: vw(-200);
+            margin-top: vw(29);
+          }
+        }
+      }
+    }
+
+    &--shirt {
+      padding-bottom: 144px;
+
+      @include max(xxl) {
+        padding-bottom: vw(144);
+      }
+
+      #{$section}-main {
+        padding-bottom: 144px;
+
+        @include max(xxl) {
+          padding-bottom: vw(144);
+        }
+      }
+
+      #{$section}-text {
+        width: 636px;
+        padding-top: 8px;
+        margin-left: -14px;
+
+        @include max(xxl) {
+          width: vw(636);
+          margin-top: vw(8);
+          margin-left: vw(-14);
+        }
+      }
+
+      #{$section}-aside {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 730px;
+        margin-left: -125px;
+        margin-top: -257px;
+
+        @include max(xxl) {
+          width: vw(730);
+          margin-left: vw(-125);
+          margin-top: vw(-257);
+        }
+      }
+
+      #{$section}-image {
+        flex-shrink: 0;
+        align-self: flex-end;
+
+        &--one {
+          width: 445px;
+          margin-left: -60px;
+          margin-bottom: 163px;
+
+          @include max(xxl) {
+            width: vw(445);
+            margin-left: vw(-60);
+            margin-bottom: vw(163);
+          }
+        }
+
+        &--two {
+          width: 345px;
+
+          @include max(xxl) {
+            width: vw(345);
+          }
+        }
+      }
+    }
+
+    &--pantaloons {
+      padding-bottom: 185px;
+
+      @include max(xxl) {
+        padding-bottom: vw(185);
+      }
+
+      #{$section}-line {
+        &::after {
+          //top: 4px;
+        }
+      }
+
+      #{$section}-main {
+        margin-left: -10px;
+        padding-bottom: 103px;
+
+        @include max(xxl) {
+          margin-left: vw(-10);
+          padding-bottom: vw(103);
+        }
+      }
+
+      #{$section}-text {
+        width: 506px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include max(xxl) {
+          width: vw(506);
+        }
+      }
+
+      #{$section}-aside {
+        margin-top: -248px;
+
+        @include max(xxl) {
+          margin-top: vw(-248);
+        }
+      }
+
+      #{$section}-image {
+        &--one {
+          width: 451px;
+          margin-left: 65px;
+
+          @include max(xxl) {
+            width: vw(451);
+            margin-left: vw(65);
+          }
+        }
+      }
+    }
+
+    &--corset {
+      padding-bottom: 254px;
+
+      @include max(xxl) {
+        padding-bottom: vw(254);
+      }
+
+      #{$section}-line {
+        &::after {
+          //top: 13px;
+        }
+      }
+
+      #{$section}-text {
+        width: 614px;
+        margin-left: -14px;
+        padding-top: 13px;
+
+        @include max(xxl) {
+          width: vw(614);
+          margin-left: vw(-14);
+          padding-top: vw(13);
+        }
+      }
+
+      #{$section}-aside {
+        margin-top: -248px;
+
+        @include max(xxl) {
+          margin-top: vw(-248);
+        }
+      }
+
+      #{$section}-image {
+        &--one {
+          width: 438px;
+          margin-left: 62px;
+          margin-top: 29px;
+
+          @include max(xxl) {
+            width: vw(438);
+            margin-left: vw(62);
+            margin-top: vw(29);
+          }
+        }
+      }
+    }
+
+    &--bra {
+      padding-bottom: 80px;
+
+      @include max(xxl) {
+        padding-bottom: vw(80);
+      }
+
+      #{$section}-text {
+        width: 496px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+
+        @include max(xxl) {
+          width: vw(496);
+          padding-top: vw(10);
+        }
+      }
+
+      #{$section}-fact {
+        margin-top: 94px;
+
+        @include max(xxl) {
+          margin-top: vw(94);
+        }
+      }
+
+      #{$section}-aside {
+        margin-top: -195px;
+
+        @include max(xxl) {
+          margin-top: vw(-195);
+        }
+      }
+
+      #{$section}-image {
+        &--one {
+          width: 550px;
+          margin-left: 3px;
+
+          @include max(xxl) {
+            width: vw(550);
+            margin-left: vw(3);
+          }
+        }
+      }
+    }
+
+    &-line {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 100%;
+
+      @include max(xxl) {
+        top: vw(12);
+        width: vw(48);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        margin-left: -2px;
+        background-image: linear-gradient(to left, $brown 50%, $gold 50%);
+
+        @include max(xxl) {
+          width: vw(4);
+          margin-left: vw(-2);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28px;
+        height: 28px;
+
+        border-radius: 50%;
+        background-color: $pinkish;
+        box-shadow: 0 0 0 10px rgba(253, 248, 248, 0.5);
+
+        @include max(xxl) {
+          width: vw(28);
+          height: vw(28);
+          box-shadow: 0 0 0 vw(10) rgba(253, 248, 248, 0.5);
+        }
+      }
+    }
+
+    &-main {
+      width: 582px;
+      flex-shrink: 0;
+      align-self: flex-start;
+
+      @include max(xxl) {
+        width: vw(582);
+      }
+    }
+
+    &-aside {
+      width: 582px;
+      flex-shrink: 0;
+      align-self: flex-start;
+
+      @include max(xxl) {
+        width: vw(582);
+      }
+    }
+
+    &-title {
+      margin: 0 0 30px;
+      text-align: center;
+
+      @include max(xxl) {
+        margin-bottom: vw(30);
+      }
+    }
+
+    &-text {
+      text-align: center;
+    }
+
+    &-fact {
+      margin-top: 43px;
+
+      @include max(xxl) {
+        margin-top: vw(43);
+      }
+    }
+
+    &-image {
+      &:hover {
+        position: relative;
+        z-index: 2;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

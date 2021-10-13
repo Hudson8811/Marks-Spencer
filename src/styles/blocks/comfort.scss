@@ -1,0 +1,44 @@
+.comfort {
+  padding-top: 42px;
+  padding-bottom: 86px;
+
+  @include max(xxl) {
+    padding-top: vw(42);
+    padding-bottom: vw(86);
+  }
+
+  &__title {
+    margin: 0 0 38px;
+    text-align: center;
+
+    @include max(xxl) {
+      margin-bottom: vw(38);
+    }
+  }
+
+  &__text {
+    max-width: 930px;
+    margin: 0 auto 52px;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    @include max(xxl) {
+      max-width: vw(930);
+      margin-bottom: vw(52);
+      font-size: vw(21);
+      line-height: vw(24);
+    }
+  }
+
+  &__image {
+    max-width: 686px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include max(xxl) {
+      max-width: vw(686);
+    }
+  }
+}

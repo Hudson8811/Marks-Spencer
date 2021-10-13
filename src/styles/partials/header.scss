@@ -9,6 +9,10 @@
     padding-top: vw(90);
   }
 
+  @include max(sm) {
+    padding-top: vw(29, 414);
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,10 @@
 
     @include max(xxl) {
       max-width: vw(1824);
+    }
+
+    @include max(xxl) {
+      max-width: none;
     }
 
     & > * {
@@ -33,6 +41,11 @@
         margin-left: vw(21);
       }
 
+      @include max(sm) {
+        width: vw(144, 414);
+        //margin-left: vw(21);
+      }
+
       img {
         display: block;
         width: 100%;
@@ -47,6 +60,11 @@
       @include max(xxl) {
         width: vw(254);
         margin-top: vw(-22);
+      }
+
+      @include max(sm) {
+        width: vw(149, 414);
+        //margin-top: vw(-22);
       }
 
       img {

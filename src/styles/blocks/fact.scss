@@ -1,2 +1,24 @@
 .fact {
+  padding: 14px 40px 37px;
+  border: solid 1px $pinkish3;
+  border-radius: 15px;
+
+  @include max(xxl) {
+    padding: vw(14) vw(40) vw(37);
+    border-radius: vw(15);
+  }
+
+  &__title {
+    margin: 0 0 20px 38px;
+    text-align: center;
+
+    @include max(xxl) {
+      margin: 0 0 vw(20) vw(38);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 700;
+  }
 }
