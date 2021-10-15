@@ -43,7 +43,7 @@
 
       @include max(sm) {
         width: vw(144, 414);
-        //margin-left: vw(21);
+        margin-left: vw(19, 414);
       }
 
       img {
@@ -64,7 +64,8 @@
 
       @include max(sm) {
         width: vw(149, 414);
-        //margin-top: vw(-22);
+        margin-top: vw(-27, 414);
+        margin-right: vw(20, 414);
       }
 
       img {

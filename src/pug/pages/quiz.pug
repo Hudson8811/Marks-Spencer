@@ -1,0 +1,41 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Тест: Как выглядит ваш идеальный комплект белья?',
+      isQuiz: true
+    };
+
+block main
+  section.quiz.quiz--q1
+    a.quiz__to-home(href="index.html") Вернуться назад
+    header.quiz__header 
+      h2.quiz__title.title <span>Тест:</span> Как выглядит ваш идеальный комплект белья?
+      .quiz__text Правильное белье должно не просто идеально сидеть, но еще и соответствовать вашему образу жизни, стилю и представлениям о прекрасном. Ответьте на несколько вопросов и узнайте, какое нижнее белье вам подходит.
+    .quiz__inner 
+      h3.quiz__question.title 1. Что вам нравится делать в свободное время больше всего?
+
+      .quiz__answers
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="1")
+          span.quiz__answer-text 
+            span Играть в подвижные игры с детьми
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="2")
+          span.quiz__answer-text 
+            span Проводить уютные выходные в постели с любимой книгой или сериалом
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="3")
+          span.quiz__answer-text 
+            span Встречаться с друзьями, ходить с ними на выставки и в рестораны
+      
+      //-.quiz__result
+        .quiz__result-image 
+          img(src="images/quiz/result-1.jpg", srcset="images/quiz/result-1@2x.jpg 2x", width="400", height="474", alt="")
+        .quiz__result-contant 
+          h3.quiz__result-title.title Результат
+          .quiz__result-text Вы динамичная, стремительная, яркая и стараетесь вести активный образ жизни. А потому вам идеально подходит нижнее белье со спортивным характером. Ваш вариант — укороченный топ без замков и застежек, как в коллекции FlexiFit от Marks & Spencer. Его удобно надевать, и он практически не заметен под одеждой благодаря гладким краям. Бра имеет специальную гелевую подкладку, которая обеспечивает комфорт и хорошую поддержку груди в течение активного дня.
+        .quiz__result-action
+          button.quiz__btn.__js_again(type="button") Пройти еще раз
+

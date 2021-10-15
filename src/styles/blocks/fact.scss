@@ -8,17 +8,31 @@
     border-radius: vw(15);
   }
 
+  @include max(sm) {
+    padding: vw(15, 414) vw(24, 414) vw(20, 414);
+    border-radius: vw(15, 414);
+  }
+
   &__title {
-    margin: 0 0 20px 38px;
+    margin: 0 0 20px;
     text-align: center;
 
     @include max(xxl) {
-      margin: 0 0 vw(20) vw(38);
+      margin: 0 0 vw(20);
+    }
+
+    @include max(sm) {
+      margin: 0 0 vw(20, 414);
     }
   }
 
   &__text {
     text-align: center;
     font-weight: 700;
+
+    @include max(sm) {
+      font-size: vw(18, 414);
+      line-height: vw(21, 414);
+    }
   }
 }

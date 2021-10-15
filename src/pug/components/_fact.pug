@@ -1,4 +1,4 @@
 mixin fact(text, className)
-  div(class= (className ? className + ' fact' : 'fact'))
+  div(class= (className ? className + ' fact' : 'fact'))&attributes(attributes)
     h3.fact__title.title.title--small Интересный факт:
     .fact__text!= text

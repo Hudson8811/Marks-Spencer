@@ -9,13 +9,19 @@ html(lang="ru")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
 		meta(name="description" content="")
 		meta(name="keywords" content="")
+		
+		//-each it in ['full-2.jpg', 'full-2@2x.jpg', 'full-3.jpg', 'full-3@2x.jpg', 'full-4.jpg', 'full-4@2x.jpg']
+			link(rel="prefetch prerender", href="images/product-card/" + it)
+			
+		link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
 		link(href="css/main.min.css" rel="stylesheet")
 
 		title= `${page.title}`
 
 	body
 		block header
-			include ../partials/_header
+			if !page.isQuiz
+				include ../partials/_header
 
 		main.main
 			block main
@@ -25,7 +31,7 @@ html(lang="ru")
 
 		block modals
 
-
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script(src="js/main.min.js")
 
 		block scripts

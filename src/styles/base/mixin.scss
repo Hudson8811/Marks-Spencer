@@ -76,3 +76,13 @@
     @content;
   }
 }
+
+/* ховер */
+@mixin hover {
+  @media (min-width: 768px) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}

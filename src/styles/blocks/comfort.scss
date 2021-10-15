@@ -7,12 +7,21 @@
     padding-bottom: vw(86);
   }
 
+  @include max(sm) {
+    padding-top: 0;
+    padding-bottom: vw(86, 414);
+  }
+
   &__title {
     margin: 0 0 38px;
     text-align: center;
 
     @include max(xxl) {
       margin-bottom: vw(38);
+    }
+
+    @include max(sm) {
+      margin-bottom: vw(16, 414);
     }
   }
 
@@ -30,6 +39,13 @@
       font-size: vw(21);
       line-height: vw(24);
     }
+
+    @include max(sm) {
+      max-width: none;
+      margin-bottom: vw(16, 414);
+      font-size: vw(16, 414);
+      line-height: vw(18, 414);
+    }
   }
 
   &__image {
@@ -39,6 +55,16 @@
 
     @include max(xxl) {
       max-width: vw(686);
+    }
+
+    @include max(sm) {
+      max-width: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }

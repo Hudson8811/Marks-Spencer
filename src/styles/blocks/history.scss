@@ -1,10 +1,18 @@
 .history {
+  @include max(sm) {
+    padding-top: vw(120, 414);
+  }
+
   &__title {
     margin: 0 0 21px;
     text-align: center;
 
     @include max(xxl) {
       margin-bottom: vw(21);
+    }
+
+    @include max(sm) {
+      margin-bottom: vw(16, 414);
     }
   }
 
@@ -22,6 +30,13 @@
       font-size: vw(21);
       line-height: vw(24);
     }
+
+    @include max(sm) {
+      max-width: none;
+      margin-bottom: vw(16, 414);
+      font-size: vw(16, 414);
+      line-height: vw(18, 414);
+    }
   }
 
   &__section {
@@ -32,8 +47,18 @@
     width: 100%;
     justify-content: space-between;
 
+    @include max(sm) {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: vw(24, 414);
+    }
+
     &--reverse {
       flex-direction: row-reverse;
+
+      @include max(sm) {
+        flex-direction: column;
+      }
     }
 
     &--bandage {
@@ -46,6 +71,11 @@
             top: -4.947916666666667vw;
             height: calc(100% + 4.947916666666667vw);
           }
+
+          @include max(sm) {
+            top: 0;
+            height: 100%;
+          }
         }
 
         &::after {
@@ -53,6 +83,11 @@
 
           @include max(xxl) {
             top: vw(76);
+          }
+
+          @include max(sm) {
+            top: auto;
+            bottom: 0;
           }
         }
       }
@@ -65,6 +100,11 @@
           padding-top: vw(72);
           padding-bottom: vw(290);
         }
+
+        @include max(sm) {
+          padding-top: 0; //vw(72);
+          padding-bottom: 0; //vw(290);
+        }
       }
 
       #{$section}-text {
@@ -75,6 +115,11 @@
           width: vw(624);
           margin-left: vw(-21);
         }
+
+        @include max(sm) {
+          width: 100%;
+          margin-left: 0;
+        }
       }
 
       #{$section}-fact {
@@ -82,6 +127,10 @@
 
         @include max(xxl) {
           margin-top: vw(66);
+        }
+
+        @include max(sm) {
+          margin-top: vw(56, 414);
         }
       }
 
@@ -94,11 +143,20 @@
           width: vw(837);
           margin-right: vw(-232);
         }
+
+        @include max(sm) {
+          width: 100%;
+          margin-right: 0;
+        }
       }
 
       #{$section}-image {
         flex-shrink: 0;
         align-self: center;
+
+        @include max(sm) {
+          align-self: flex-start;
+        }
 
         &--one {
           position: relative;
@@ -107,6 +165,11 @@
 
           @include max(xxl) {
             width: vw(490);
+          }
+
+          @include max(sm) {
+            width: vw(193, 414);
+            margin-left: vw(20, 414);
           }
         }
 
@@ -120,6 +183,12 @@
             margin-left: vw(-200);
             margin-top: vw(29);
           }
+
+          @include max(sm) {
+            width: vw(305, 414);
+            margin-left: vw(-143, 414);
+            margin-top: vw(30, 414);
+          }
         }
       }
     }
@@ -131,11 +200,19 @@
         padding-bottom: vw(144);
       }
 
+      @include max(sm) {
+        padding-bottom: vw(24, 414);
+      }
+
       #{$section}-main {
         padding-bottom: 144px;
 
         @include max(xxl) {
           padding-bottom: vw(144);
+        }
+
+        @include max(sm) {
+          padding-bottom: 0;
         }
       }
 
@@ -148,6 +225,12 @@
           width: vw(636);
           margin-top: vw(8);
           margin-left: vw(-14);
+        }
+
+        @include max(sm) {
+          width: 100%;
+          margin-top: 0;
+          margin-left: 0;
         }
       }
 
@@ -162,6 +245,12 @@
           width: vw(730);
           margin-left: vw(-125);
           margin-top: vw(-257);
+        }
+
+        @include max(sm) {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 0;
         }
       }
 
@@ -179,6 +268,12 @@
             margin-left: vw(-60);
             margin-bottom: vw(163);
           }
+
+          @include max(sm) {
+            width: vw(228, 414);
+            margin-left: vw(-31, 414);
+            margin-bottom: vw(74, 414);
+          }
         }
 
         &--two {
@@ -186,6 +281,10 @@
 
           @include max(xxl) {
             width: vw(345);
+          }
+
+          @include max(sm) {
+            width: vw(177, 414);
           }
         }
       }
@@ -198,10 +297,8 @@
         padding-bottom: vw(185);
       }
 
-      #{$section}-line {
-        &::after {
-          //top: 4px;
-        }
+      @include max(sm) {
+        padding-bottom: vw(24, 414);
       }
 
       #{$section}-main {
@@ -211,6 +308,11 @@
         @include max(xxl) {
           margin-left: vw(-10);
           padding-bottom: vw(103);
+        }
+
+        @include max(sm) {
+          margin-left: 0;
+          padding-bottom: 0;
         }
       }
 
@@ -222,6 +324,10 @@
         @include max(xxl) {
           width: vw(506);
         }
+
+        @include max(sm) {
+          width: 100%;
+        }
       }
 
       #{$section}-aside {
@@ -229,6 +335,10 @@
 
         @include max(xxl) {
           margin-top: vw(-248);
+        }
+
+        @include max(sm) {
+          margin-top: 0;
         }
       }
 
@@ -241,6 +351,11 @@
             width: vw(451);
             margin-left: vw(65);
           }
+
+          @include max(sm) {
+            width: vw(281, 414);
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -252,10 +367,8 @@
         padding-bottom: vw(254);
       }
 
-      #{$section}-line {
-        &::after {
-          //top: 13px;
-        }
+      @include max(sm) {
+        padding-bottom: vw(24, 414);
       }
 
       #{$section}-text {
@@ -268,6 +381,12 @@
           margin-left: vw(-14);
           padding-top: vw(13);
         }
+
+        @include max(sm) {
+          width: 100%;
+          margin-left: 0;
+          padding-top: 0;
+        }
       }
 
       #{$section}-aside {
@@ -275,6 +394,10 @@
 
         @include max(xxl) {
           margin-top: vw(-248);
+        }
+
+        @include max(sm) {
+          margin-top: 0;
         }
       }
 
@@ -289,6 +412,11 @@
             margin-left: vw(62);
             margin-top: vw(29);
           }
+
+          @include max(sm) {
+            width: vw(281, 414);
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -298,6 +426,23 @@
 
       @include max(xxl) {
         padding-bottom: vw(80);
+      }
+
+      @include max(sm) {
+        padding-bottom: vw(24, 414);
+      }
+
+      #{$section}-main {
+        @include max(sm) {
+          &::after {
+            content: "";
+            display: block;
+            width: vw(4, 414);
+            height: vw(247, 414);
+            margin: vw(24, 414) auto;
+            background-image: linear-gradient(to left, $brown 50%, $gold 50%);
+          }
+        }
       }
 
       #{$section}-text {
@@ -310,6 +455,11 @@
           width: vw(496);
           padding-top: vw(10);
         }
+
+        @include max(sm) {
+          width: 100%;
+          padding-top: 0;
+        }
       }
 
       #{$section}-fact {
@@ -318,6 +468,10 @@
         @include max(xxl) {
           margin-top: vw(94);
         }
+
+        @include max(sm) {
+          margin-top: vw(56, 414);
+        }
       }
 
       #{$section}-aside {
@@ -325,6 +479,10 @@
 
         @include max(xxl) {
           margin-top: vw(-195);
+        }
+
+        @include max(sm) {
+          margin-top: 0;
         }
       }
 
@@ -336,6 +494,11 @@
           @include max(xxl) {
             width: vw(550);
             margin-left: vw(3);
+          }
+
+          @include max(sm) {
+            width: vw(328, 414);
+            margin: 0 auto;
           }
         }
       }
@@ -354,6 +517,17 @@
         width: vw(48);
       }
 
+      @include max(sm) {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        width: vw(48, 414);
+        height: vw(260, 414);
+        margin-bottom: 44px;
+        align-self: center;
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -367,6 +541,11 @@
         @include max(xxl) {
           width: vw(4);
           margin-left: vw(-2);
+        }
+
+        @include max(sm) {
+          width: vw(4, 414);
+          margin-left: vw(-2, 414);
         }
       }
 
@@ -388,6 +567,14 @@
           height: vw(28);
           box-shadow: 0 0 0 vw(10) rgba(253, 248, 248, 0.5);
         }
+
+        @include max(sm) {
+          top: auto;
+          bottom: 0;
+          width: vw(28, 414);
+          height: vw(28, 414);
+          box-shadow: 0 0 0 vw(10, 414) rgba(253, 248, 248, 0.5);
+        }
       }
     }
 
@@ -399,6 +586,12 @@
       @include max(xxl) {
         width: vw(582);
       }
+
+      @include max(sm) {
+        width: 100%;
+        margin-top: vw(24, 414);
+        order: 1;
+      }
     }
 
     &-aside {
@@ -409,6 +602,10 @@
       @include max(xxl) {
         width: vw(582);
       }
+
+      @include max(sm) {
+        width: 100%;
+      }
     }
 
     &-title {
@@ -417,6 +614,10 @@
 
       @include max(xxl) {
         margin-bottom: vw(30);
+      }
+
+      @include max(sm) {
+        margin-bottom: vw(16, 414);
       }
     }
 
@@ -430,13 +631,18 @@
       @include max(xxl) {
         margin-top: vw(43);
       }
+
+      @include max(sm) {
+        margin-top: vw(56, 414);
+        margin-bottom: vw(-24, 414);
+      }
     }
 
     &-image {
-      &:hover {
+      /*&:hover {
         position: relative;
         z-index: 2;
-      }
+      }*/
 
       img {
         display: block;

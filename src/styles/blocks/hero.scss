@@ -17,15 +17,12 @@
 
   @include max(sm) {
     padding-top: vw(226, 414);
-    //padding-bottom: vw(316);
+    padding-bottom: vw(28, 414);
     background-image: url("../images/hero/hero-bg-mobile.jpg");
 
     @include retina {
       background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
     }
-  }
-
-  &__container {
   }
 
   &__main {
@@ -48,6 +45,13 @@
         bottom: vw(127);
         margin-left: vw(-2);
       }
+
+      @include max(sm) {
+        width: vw(4, 414);
+        height: vw(271, 414);
+        bottom: vw(144, 414);
+        margin-left: vw(-2, 414);
+      }
     }
   }
 
@@ -69,6 +73,15 @@
       padding: vw(53) vw(12) vw(54);
       font-size: vw(48);
       border-radius: vw(5);
+    }
+
+    @include max(sm) {
+      max-width: none;
+      margin-bottom: vw(15, 414);
+      padding: vw(15, 414) vw(20, 414) vw(18, 414);
+      font-size: vw(42, 414);
+      line-height: 0.9;
+      border-radius: vw(5, 414);
     }
 
     span {
@@ -95,6 +108,15 @@
         border-width: vw(3);
         box-shadow: 0px vw(4) vw(4) rgba(0, 0, 0, 0.25);
       }
+
+      @include max(sm) {
+        top: vw(8, 414);
+        left: vw(5, 414);
+        right: vw(5, 414);
+        bottom: vw(8, 414);
+        border-width: vw(2, 414);
+        box-shadow: 0px vw(4, 414) vw(4, 414) rgba(0, 0, 0, 0.25);
+      }
     }
   }
 
@@ -120,6 +142,15 @@
       padding: vw(37) vw(10) vw(42);
     }
 
+    @include max(sm) {
+      position: relative;
+      top: 0;
+      left: vw(20, 414);
+      width: vw(144, 414);
+      height: vw(144, 414);
+      padding: vw(25, 414) vw(5, 414) vw(20, 414);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -142,6 +173,16 @@
         border-width: vw(10);
         filter: blur($blur);
       }
+
+      @include max(sm) {
+        $blur2: vw(13, 414);
+        top: vw(-10, 414);
+        left: vw(-10, 414);
+        right: vw(-10, 414);
+        bottom: vw(-10, 414);
+        border-width: vw(10, 414);
+        filter: blur($blur2);
+      }
     }
 
     &::after {
@@ -157,6 +198,12 @@
         width: vw(57);
         height: vw(5);
         margin-top: vw(9);
+      }
+
+      @include max(sm) {
+        width: vw(38, 414);
+        height: vw(3, 414);
+        margin-top: vw(5, 414);
       }
     }
 
@@ -176,6 +223,12 @@
         font-size: vw(18);
         line-height: vw(24);
       }
+
+      @include max(sm) {
+        margin-bottom: vw(6, 414);
+        font-size: vw(15, 414);
+        line-height: vw(24, 414);
+      }
     }
 
     &-text {
@@ -191,6 +244,11 @@
       @include max(xxl) {
         font-size: vw(21);
         line-height: vw(24);
+      }
+
+      @include max(sm) {
+        font-size: vw(14, 414);
+        line-height: vw(18, 414);
       }
     }
   }
@@ -221,6 +279,16 @@
       border-radius: vw(5);
     }
 
+    @include max(sm) {
+      max-width: none;
+      margin-bottom: 0;
+      padding: vw(25, 414) vw(20, 414) vw(25, 414) vw(30, 414);
+
+      font-size: vw(16, 414);
+      line-height: vw(18, 414);
+      border-radius: vw(5, 414);
+    }
+
     .short {
       max-width: 580px;
       margin-left: auto;
@@ -228,6 +296,10 @@
 
       @include max(xxl) {
         max-width: vw(580);
+      }
+
+      @include max(sm) {
+        max-width: none;
       }
     }
 
@@ -250,6 +322,15 @@
         border-width: vw(3);
         box-shadow: 0px vw(4) vw(4) rgba(0, 0, 0, 0.25);
       }
+
+      @include max(sm) {
+        top: vw(5, 414);
+        left: vw(5, 414);
+        right: vw(5, 414);
+        bottom: vw(5, 414);
+        border-width: vw(2, 414);
+        box-shadow: 0px vw(4, 414) vw(4, 414) rgba(0, 0, 0, 0.25);
+      }
     }
 
     p + p {
@@ -257,6 +338,9 @@
 
       @include max(xxl) {
         margin-top: vw(24);
+      }
+      @include max(sm) {
+        margin-top: vw(20, 414);
       }
     }
 
