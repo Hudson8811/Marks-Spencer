@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
     let questions = null;
     let results = null;
 
-    const onAnswerChangeDebounced = debounce(onAnswerChange, 1500);
+    const onAnswerChangeDebounced = debounce(onAnswerChange, 700);
 
     fetch('js/data/questions.json')
       .then(response => response.json())

@@ -567,6 +567,15 @@
         line-height: vw(18, 414);
         text-align: center;
       }
+
+      a {
+        color: $dark;
+        text-decoration: underline;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
     }
 
     &-action {

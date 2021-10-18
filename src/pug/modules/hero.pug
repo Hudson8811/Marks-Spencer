@@ -1,5 +1,10 @@
 section.hero 
   .hero__container.container
+    a.hero__go-to-history(href="#history")
+      img(src="images/hero/gif.gif", width="106", height="78", alt="")
+    .hero__table-bg  
+      //-img.anim(src="images/hero/text.png", alt="")
+      img(src="images/hero/table.png", alt="")
     h1.hero__title.title(data-aos="fade-up" data-aos-delay="400") Нижнее белье: <span>эволюция</span>
     
     .hero__main
@@ -10,6 +15,6 @@ section.hero
 
         p Автор: Настя Обухова-Реми
 
-      a.hero__button(href="quiz.html", data-aos="fade")
+      a.hero__button.opacity-0(href="quiz.html")
         span.hero__button-title тест
         span.hero__button-text Как выглядит ваш идеальный комплект белья?

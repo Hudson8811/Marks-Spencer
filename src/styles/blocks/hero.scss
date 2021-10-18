@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   padding-top: 76px;
   padding-bottom: 316px;
   background-repeat: no-repeat;
@@ -22,6 +23,41 @@
 
     @include retina {
       background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
+    }
+  }
+
+  &__table-bg {
+    position: absolute;
+    top: vw(466);
+    right: 0;
+    content: "";
+    width: vw(747);
+    pointer-events: none;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 52.3%;
+      left: 30.7%;
+      width: vw(101);
+      height: vw(110);
+      background-repeat: no-repeat;
+      background-image: url("../images/hero/text.png");
+      background-size: 100% auto;
+      //filter: invert(1);
+      //opacity: 0.5;
+      animation: neon-3 5s steps(1, start) infinite reverse;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -120,6 +156,36 @@
     }
   }
 
+  &__go-to-history {
+    position: absolute;
+    z-index: 2;
+    //top: 258px;
+    //right: 200px;
+    //width: 99px;
+    overflow: hidden;
+    //border-radius: 28px 21px 24px 20px;
+
+    //@include max(xxl) {
+    //top: vw(258);
+    //right: vw(200);
+    //width: vw(99);
+    top: 23.2%;
+    right: 10.5%;
+    width: 5.31%; //vw(101);
+    border-radius: vw(28) vw(21) vw(24) vw(20);
+    //}
+
+    @include max(sm) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &__button {
     position: absolute;
     z-index: 0;
@@ -133,8 +199,30 @@
     border-radius: 50%;
     background-color: $pink;
     text-decoration: none;
+    transition: opacity 0.4s ease, transform 0.3s ease;
 
-    &:hover{
+    &.opacity-0 {
+      opacity: 0;
+    }
+
+    &.is-shifted {
+      transform: translateY(-300px);
+    }
+
+    &.is-fixed {
+      position: fixed;
+      z-index: 3;
+      top: 46px;
+      left: 46px;
+
+      transform: scale(0.8);
+    }
+
+    &.is-fixed.is-shifted {
+      transform: translateY(-300px) scale(0.8);
+    }
+
+    &:hover {
       transform: scale(1.1) !important;
     }
 
@@ -341,5 +429,32 @@
     b {
       font-weight: 600;
     }
+  }
+}
+
+@keyframes neon-3 {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

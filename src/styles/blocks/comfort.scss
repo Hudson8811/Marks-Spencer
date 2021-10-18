@@ -46,6 +46,15 @@
       font-size: vw(16, 414);
       line-height: vw(18, 414);
     }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &__image {
