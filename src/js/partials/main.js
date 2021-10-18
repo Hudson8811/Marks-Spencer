@@ -5,6 +5,6 @@ window.addEventListener('load', function() {
   //sectionTexts.forEach(it => it.setAttribute('contenteditable', true));
   //sectionTitles.forEach(it => it.setAttribute('contenteditable', true));
 
-  AOS.init()
+  AOS.init();
 
 });

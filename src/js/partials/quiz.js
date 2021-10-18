@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  const retina = window.devicePixelRatio > 1 ? true : false;
+  let retina = window.devicePixelRatio > 1 ? true : false;
   const viewportWidth = document.documentElement.clientWidth;
   let isMobile = viewportWidth < 768;
 
@@ -196,6 +196,19 @@ window.addEventListener('load', () => {
       }
 
 
+    }
+
+    function preloadImage(id, imgPrefix, onSuccess, onError) {
+      const mobilePart = isMobile ? 'mobile-' : '';
+      const imgName = retina ? `${imgPrefix}${mobilePart}${id}@2x.jpg` : `${imgPrefix}${mobilePart}${id}.jpg`;
+
+      return new Promise((onSuccess, onError) => {
+        const image = new Image();
+
+        image.onload = () => onSuccess(image);
+        image.onerror = () => onError();
+        image.src = `images/quiz/${imgName}`;
+      })
     }
 
   }
