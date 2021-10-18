@@ -32,17 +32,17 @@
       content: "";
       position: absolute;
       left: 50%;
-      bottom: 127px;
+      bottom: -60px;
       transform: translateY(100%);
       width: 4px;
-      height: 478px;
+      height: 271px;
       margin-left: -2px;
       background-image: linear-gradient(to left, $brown 50%, $gold 50%);
 
       @include max(xxl) {
         width: vw(4);
-        height: vw(478);
-        bottom: vw(127);
+        height: vw(271);
+        bottom: vw(-60);
         margin-left: vw(-2);
       }
 
@@ -133,6 +133,10 @@
     border-radius: 50%;
     background-color: $pink;
     text-decoration: none;
+
+    &:hover{
+      transform: scale(1.1) !important;
+    }
 
     @include max(xxl) {
       top: vw(20);
