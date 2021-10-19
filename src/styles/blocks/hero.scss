@@ -393,8 +393,9 @@
       left: 11px;
       right: 11px;
       bottom: 12px;
-      border: solid 3px $green-52;
+      border: solid 5px #223529;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background-color: rgba(105,93,80,.25);
 
       @include max(xxl) {
         top: vw(13);
