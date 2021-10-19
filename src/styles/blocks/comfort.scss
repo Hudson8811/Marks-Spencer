@@ -76,4 +76,28 @@
       height: auto;
     }
   }
+  .copyright{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .quiz__social{
+      display: flex;
+      margin-top: 0;
+      .social__item svg{
+        width:17px;
+        height: 17px;
+      }
+
+      @include max(sm) {
+        margin-bottom: vw(100);
+      }
+    }
+
+    @include max(sm) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
 }
