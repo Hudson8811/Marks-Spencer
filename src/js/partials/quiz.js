@@ -27,7 +27,6 @@ window.addEventListener('load', () => {
       .then(response => response.json())
       .then(data => {
         questions = data;
-        renderQuestion(currentQ);
 
         fetch('js/data/results.json')
           .then(response => response.json())
@@ -39,6 +38,20 @@ window.addEventListener('load', () => {
               results[key].mod = key;
             }
 
+            const hash = window.location.hash.slice(1);
+            const isResult = results.hasOwnProperty(hash);
+           
+
+            if (isResult) {
+              results[hash].points = 1;
+              quizResult = getResults(results);
+              renderResult();
+              
+              overlay.classList.remove('shown');
+            } else {
+              renderQuestion(currentQ);
+            }
+
             quiz.addEventListener('change', onAnswerChangeDebounced);
             quiz.addEventListener('click', (e) => {
               if (e.target.classList.contains('__js_more-result')) {
@@ -48,6 +61,7 @@ window.addEventListener('load', () => {
                   overlay.ontransitionend = null;
                   renderResult();
                   overlay.classList.remove('shown');
+
                 }
               }
 
@@ -56,11 +70,11 @@ window.addEventListener('load', () => {
                 maxPoints = 0;
                 quizResult = null;
 
-
                 overlay.classList.add('shown');
 
                 overlay.ontransitionend = () => {
                   overlay.ontransitionend = null;
+                  window.location.hash = '';
                   renderQuestion(currentQ);
                   overlay.classList.remove('shown');
                 }
@@ -81,6 +95,8 @@ window.addEventListener('load', () => {
       if (currentQ < questions.length - 1) {
         preloadNextBgImage(questions[currentQ].id + 1, 'quiz-bg-');
       }
+
+      overlay.classList.remove('shown');
     }
 
     function getAnswersHtml(id, answers) {
@@ -112,6 +128,7 @@ window.addEventListener('load', () => {
       const result = quizResult.pop();
 
       //preloadNextBgImage(result.mod, 'quiz-bg-result-');
+      window.location.hash = result.mod;
 
       quiz.className = `quiz quiz--result quiz--r-${result.mod}`;
 
@@ -165,7 +182,7 @@ window.addEventListener('load', () => {
         } else {
           overlay.classList.add('shown');
 
-          console.log(results);
+          //console.log(results);
           quizResult = getResults(results);
 
           overlay.ontransitionend = () => {
