@@ -42,12 +42,12 @@
       content: "";
       position: absolute;
       z-index: 1;
-      top: 52.3%;
-      left: 30.7%;
-      width: vw(101);
-      height: vw(110);
+      top: 0; //52.3%;
+      left: 0; //30.7%;
+      width: 100%; //vw(101);
+      height: 100%; //vw(241); //vw(110);
       background-repeat: no-repeat;
-      background-image: url("../images/hero/text.png");
+      background-image: url("../images/hero/text2.png");
       background-size: 100% auto;
       //filter: invert(1);
       //opacity: 0.5;
@@ -395,7 +395,7 @@
       bottom: 12px;
       border: solid 5px #223529;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      background-color: rgba(105,93,80,.25);
+      background-color: rgba(105, 93, 80, 0.25);
 
       @include max(xxl) {
         top: vw(13);
